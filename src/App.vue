@@ -53,6 +53,7 @@ export default {
 <style  rel="text/scss" lang="scss" scoped>
 .app-container{
   padding-top: 40px;
+  padding-bottom: 50px; 
 	overflow-x: hidden;
 }
 .v-enter{
@@ -62,6 +63,7 @@ export default {
 .v-leave-to{
 	opacity: 0;
 	transform: translateX(-100%);
+	position: absolute;
 }
 .v-enter-active,
 .v-leave-active{

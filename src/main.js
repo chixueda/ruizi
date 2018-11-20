@@ -10,9 +10,14 @@ Vue.use(MintUI)
 Vue.use(vueResource)
 import './assets/mui.min.css'
 import './assets/icons-extra.css'
+import moment from 'moment'
 Vue.config.productionTip = false
+Vue.http.options.emulateJSON = true;
+Vue.filter('dateFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+        return moment(dataStr).format(pattern)
 
-/* eslint-disable no-new */
+    })
+    /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
