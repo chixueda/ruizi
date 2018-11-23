@@ -6,11 +6,17 @@ import MintUI from 'mint-ui'
 import router from './router'
 import 'mint-ui/lib/style.css'
 import vueResource from 'vue-resource'
-Vue.use(MintUI)
-Vue.use(vueResource)
+import { Lazyload } from 'mint-ui'
 import './assets/mui.min.css'
 import './assets/icons-extra.css'
 import moment from 'moment'
+import 'mint-ui/lib/style.css'
+import VuePreview from 'vue-preview'
+Vue.use(Lazyload)
+Vue.use(MintUI)
+Vue.use(VuePreview)
+
+Vue.use(vueResource)
 Vue.config.productionTip = false
 Vue.http.options.emulateJSON = true;
 Vue.filter('dateFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {

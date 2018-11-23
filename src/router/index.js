@@ -7,6 +7,9 @@ import shopcar from '../components/shopcar'
 import newslist from '../components/news/newslist'
 import newsinfo from '../components/news/newsinfo'
 import photolist from '../components/photo/photolist'
+import photoinfo from '../components/photo/photoinfo'
+import goodslist from '../components/goods/goodslist'
+import goodsinfo from '../components/goods/goodsinfo'
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +49,18 @@ export default new Router({
         {
             path: '/home/photolist',
             component: photolist
+        },
+        {
+            path: '/home/photoinfo/:id',
+            component: photoinfo
+        },
+        {
+            path: '/home/goodslist',
+            component: goodslist
+        }, {
+            path: '/home/goodsinfo/:id',
+            component: goodsinfo,
+            name: "goodsinfo"
         }
 
     ],
